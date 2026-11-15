@@ -4,7 +4,7 @@
 with Claude doing the searching, writing and form-filling while you stay in charge.**
 
 It looks for scholarships, funding that comes with admission, and salaried PhD positions in
-**Europe, Canada, the US, Australia and the Nordic countries**. It runs on your own computer with
+**Europe, Canada, the US, Australia, the Nordic countries, China and South Korea**. It runs on your own computer with
 **Claude Code** and your normal Claude subscription. There's no API key, no server and no extra cost.
 
 ![The Overview screen: next deadlines, what needs you, pipeline, documents, drafts and upcoming tasks](docs/screenshots/overview.png)

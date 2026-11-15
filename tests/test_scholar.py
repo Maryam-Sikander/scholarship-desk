@@ -106,6 +106,8 @@ class ProfileTests(TempHome):
         self.assertEqual(prof.set_value(p, "target.levels", "Master's, Ph.D")["value"], ["masters", "phd"])
         self.assertEqual(prof.set_value(p, "target.regions", "Nordics, North America")["value"],
                          ["scandinavia", "north_america"])
+        self.assertEqual(prof.set_value(p, "target.regions", "Europe, East Asia, Korea")["value"],
+                         ["europe", "east_asia"])
 
     def test_derived_facts(self):
         p = self.base_profile(**{"identity.date_of_birth": "2000-06-15"})
@@ -470,6 +472,20 @@ class QueriesTests(TempHome):
         self.assertIn("Pakistan", texts)
         self.assertTrue(any(q["kind"] == "phd_jobs" for q in queries.load()["queries"]))
 
+    def test_east_asia_queries(self):
+        p = self.base_profile(**{"target.regions": "east_asia"})
+        prof.save(p)
+        self.assertTrue(queries.generate(p)["ok"])
+        plan = queries.load()["queries"]
+        self.assertTrue(plan)
+        self.assertTrue(all(q["region"] in ("east_asia", None) for q in plan))
+        countries_hit = {q.get("country") for q in plan}
+        self.assertTrue({"China", "South Korea"} <= countries_hit)
+        domains = {q.get("domain") for q in plan}
+        self.assertIn("campuschina.org", domains)
+        self.assertIn("studyinkorea.go.kr", domains)
+        self.assertTrue(any(q["kind"] == "supervisor" for q in plan))  # PhD target -> supervisor letter
+
 
 class RegistryTests(unittest.TestCase):
     def test_registry_helpers(self):
@@ -479,6 +495,15 @@ class RegistryTests(unittest.TestCase):
         self.assertEqual(registry.base_domain("www.grad.ubc.ca"), "ubc.ca")
         self.assertEqual(registry.base_domain("scholarships.unimelb.edu.au"), "unimelb.edu.au")
         self.assertTrue(registry.same_site("www.ox.ac.uk", "rhodeshouse.ox.ac.uk"))
+        # East Asia: Korean/Chinese second-level suffixes and official sources
+        self.assertEqual(registry.base_domain("admission.kaist.ac.kr"), "kaist.ac.kr")
+        self.assertFalse(registry.same_site("kaist.ac.kr", "snu.ac.kr"))
+        self.assertEqual(registry.base_domain("www.studyinkorea.go.kr"), "studyinkorea.go.kr")
+        self.assertEqual(registry.base_domain("english.ucas.ac.cn"), "ucas.ac.cn")
+        self.assertEqual(registry.find_source("studyinchina.csc.edu.cn")["region"], "east_asia")
+        self.assertTrue(registry.find_source("www.niied.go.kr"))
+        self.assertTrue(registry.is_discovery("cucas.cn"))
+        self.assertFalse(registry.find_source("cucas.cn"))
         names, unknown = countries.expand(["@nordic", "Holland"])
         self.assertIn("netherlands", names)
         self.assertIn("iceland", names)

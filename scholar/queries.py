@@ -17,6 +17,7 @@ COUNTRIES_BY_REGION = {
     "north_america": ["Canada", "United States"],
     "australia": ["Australia"],
     "scandinavia": ["Norway", "Sweden", "Denmark", "Finland", "Iceland"],
+    "east_asia": ["China", "South Korea"],
 }
 LEVEL_WORDS = {"masters": "master's", "phd": "PhD", "undergraduate": "undergraduate",
                "postdoc": "postdoctoral"}
@@ -92,6 +93,19 @@ def generate(profile: dict[str, Any], max_queries: int = 80, today: date | None 
         if "masters" in levels and region == "australia":
             q(f"MPhil research master's scholarship {field} Australia international {year}",
               "research_masters", region, 2)
+        if region == "east_asia":
+            # Government awards have two routes (university-recommended vs embassy/HEC-nominated)
+            # with different deadlines; Chinese PhDs often want a supervisor's acceptance letter.
+            words = " ".join(level_words)
+            q(f"Chinese Government Scholarship university program {field} {words} English-taught {year} "
+              f"international students deadline", "government_route", region, 2, country="China")
+            q(f"Global Korea Scholarship GKS {year} graduate university track embassy track {field}",
+              "government_route", region, 2, country="South Korea")
+            if "phd" in levels:
+                q(f"{topic} PhD China supervisor acceptance letter fully funded international {year}",
+                  "supervisor", region, 2, country="China")
+            q(f"KAIST UNIST POSTECH GIST international graduate admission full scholarship {field} {year}",
+              "university", region, 2, country="South Korea")
 
     for university in values.get("target.universities") or []:
         for words in level_words:

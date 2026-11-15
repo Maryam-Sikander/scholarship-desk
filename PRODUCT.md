@@ -19,7 +19,7 @@ deadlines, while Claude Code does the searching, writing and form-filling in the
 
 ## Product Purpose
 
-Scholarship Desk finds funded opportunities in Europe, North America, Australia and the Nordics,
+Scholarship Desk finds funded opportunities in Europe, North America, Australia, the Nordics and East Asia (China, South Korea),
 checks the applicant's eligibility (including citizenship and residence rules), plans backwards
 from deadlines, drafts tailored answers from the applicant's own documents, applies through a
 supervised browser agent, and tracks outcomes.

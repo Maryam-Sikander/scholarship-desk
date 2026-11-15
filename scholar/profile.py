@@ -15,7 +15,7 @@ from typing import Any
 from . import countries, store
 
 LEVELS = ["undergraduate", "masters", "phd", "postdoc"]
-REGIONS = ["europe", "north_america", "australia", "scandinavia"]
+REGIONS = ["europe", "north_america", "australia", "scandinavia", "east_asia"]
 RESIDENCE_STATUS = [
     "citizen", "permanent_resident", "study_permit", "work_permit", "visitor",
     "refugee_or_protected", "other",
@@ -34,6 +34,7 @@ SYNONYMS = {
     "postdoctoral": "postdoc", "post_doc": "postdoc", "bachelor": "undergraduate",
     "bachelors": "undergraduate", "nordic": "scandinavia", "nordics": "scandinavia",
     "na": "north_america", "oceania": "australia", "pr": "permanent_resident",
+    "asia": "east_asia", "china": "east_asia", "korea": "east_asia", "south_korea": "east_asia",
     "student_visa": "study_permit", "student_permit": "study_permit",
 }
 

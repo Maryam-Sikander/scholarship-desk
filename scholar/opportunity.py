@@ -723,7 +723,7 @@ def template() -> dict[str, Any]:
         "sponsor": "Example Agency",
         "type": "scholarship  (scholarship | admission_funding | phd_position | nomination_fellowship)",
         "levels": ["masters"],
-        "region": "scandinavia  (europe | north_america | australia | scandinavia)",
+        "region": "scandinavia  (europe | north_america | australia | scandinavia | east_asia)",
         "host_countries": ["Sweden"],
         "fields": ["any"],
         "source_kind": "official  (official | authorized_administrator | discovery)",

@@ -9,7 +9,7 @@ const S = {
   draft: null,
 };
 
-const REGION = { europe: "Europe", north_america: "North America", australia: "Australia", scandinavia: "Nordics" };
+const REGION = { europe: "Europe", north_america: "North America", australia: "Australia", scandinavia: "Nordics", east_asia: "East Asia" };
 const TYPE = {
   scholarship: "Scholarship",
   admission_funding: "Funded with admission",

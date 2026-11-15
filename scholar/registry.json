@@ -1,6 +1,6 @@
 {
  "version": 1,
- "reviewed": "2026-11-11",
+ "reviewed": "2026-11-15",
  "note": "Official sources the agent searches first. A record whose page is on one of these domains counts as proven official. Run 'python -m scholar registry check' to find moved pages.",
  "sources": [
   {"name": "Vanier Canada Graduate Scholarships", "region": "north_america", "country": "Canada", "kind": "government", "domains": ["vanier.gc.ca"], "url": "https://vanier.gc.ca/en/home-accueil.html", "levels": ["phd"], "note": "Nomination by the university; internal deadline is earlier."},
@@ -106,7 +106,24 @@
   {"name": "University of Iceland", "region": "scandinavia", "country": "Iceland", "kind": "university", "domains": ["hi.is"], "url": "https://english.hi.is/", "levels": ["masters", "phd"]},
   {"name": "NordForsk", "region": "scandinavia", "country": "Nordic", "kind": "intergovernmental", "domains": ["nordforsk.org"], "url": "https://www.nordforsk.org/", "levels": ["phd"]},
   {"name": "Nordplus", "region": "scandinavia", "country": "Nordic", "kind": "intergovernmental", "domains": ["nordplusonline.org"], "url": "https://www.nordplusonline.org/", "levels": ["masters"]},
-  {"name": "American-Scandinavian Foundation", "region": "scandinavia", "country": "Nordic", "kind": "foundation", "domains": ["amscan.org"], "url": "https://www.amscan.org/", "levels": ["masters", "phd"]}
+  {"name": "American-Scandinavian Foundation", "region": "scandinavia", "country": "Nordic", "kind": "foundation", "domains": ["amscan.org"], "url": "https://www.amscan.org/", "levels": ["masters", "phd"]},
+  {"name": "Chinese Government Scholarship (CSC / Campus China)", "region": "east_asia", "country": "China", "kind": "government", "domains": ["campuschina.org", "csc.edu.cn"], "url": "https://www.campuschina.org/", "levels": ["masters", "phd"], "note": "Two routes: university program (apply via the university) and bilateral/HEC nomination; deadlines differ. Application site studyinchina.csc.edu.cn."},
+  {"name": "ANSO Scholarship (Alliance of International Science Organizations)", "region": "east_asia", "country": "China", "kind": "intergovernmental", "domains": ["anso.org.cn"], "url": "https://www.anso.org.cn/", "levels": ["masters", "phd"], "fields": ["natural_sciences_engineering"], "note": "Master's/PhD at UCAS, USTC and CAS institutes for students from developing countries."},
+  {"name": "University of Chinese Academy of Sciences (UCAS)", "region": "east_asia", "country": "China", "kind": "university", "domains": ["ucas.ac.cn", "ucas.edu.cn"], "url": "https://english.ucas.ac.cn/", "levels": ["masters", "phd"]},
+  {"name": "Tsinghua University Graduate Admissions", "region": "east_asia", "country": "China", "kind": "university", "domains": ["tsinghua.edu.cn"], "url": "https://www.tsinghua.edu.cn/en/", "levels": ["masters", "phd"]},
+  {"name": "Peking University International Students", "region": "east_asia", "country": "China", "kind": "university", "domains": ["pku.edu.cn"], "url": "https://english.pku.edu.cn/", "levels": ["masters", "phd"]},
+  {"name": "Shanghai Jiao Tong University International Students", "region": "east_asia", "country": "China", "kind": "university", "domains": ["sjtu.edu.cn"], "url": "https://isc.sjtu.edu.cn/", "levels": ["masters", "phd"]},
+  {"name": "Zhejiang University International Students", "region": "east_asia", "country": "China", "kind": "university", "domains": ["zju.edu.cn"], "url": "https://iczu.zju.edu.cn/", "levels": ["masters", "phd"]},
+  {"name": "Fudan University International Students", "region": "east_asia", "country": "China", "kind": "university", "domains": ["fudan.edu.cn"], "url": "https://www.fudan.edu.cn/en/", "levels": ["masters", "phd"]},
+  {"name": "Global Korea Scholarship (GKS / NIIED)", "region": "east_asia", "country": "South Korea", "kind": "government", "domains": ["studyinkorea.go.kr", "niied.go.kr"], "url": "https://www.studyinkorea.go.kr/", "levels": ["masters", "phd"], "note": "Embassy track and university track run on different deadlines; an applicant may use only one."},
+  {"name": "KAIST Graduate Admissions", "region": "east_asia", "country": "South Korea", "kind": "university", "domains": ["kaist.ac.kr"], "url": "https://admission.kaist.ac.kr/intl-graduate/", "levels": ["masters", "phd"]},
+  {"name": "Seoul National University Admissions", "region": "east_asia", "country": "South Korea", "kind": "university", "domains": ["snu.ac.kr"], "url": "https://admission.snu.ac.kr/", "levels": ["masters", "phd"]},
+  {"name": "POSTECH Graduate Admissions", "region": "east_asia", "country": "South Korea", "kind": "university", "domains": ["postech.ac.kr"], "url": "https://www.postech.ac.kr/eng/", "levels": ["masters", "phd"]},
+  {"name": "UNIST Graduate Admissions", "region": "east_asia", "country": "South Korea", "kind": "university", "domains": ["unist.ac.kr"], "url": "https://adm-g.unist.ac.kr/", "levels": ["masters", "phd"]},
+  {"name": "GIST Graduate Admissions", "region": "east_asia", "country": "South Korea", "kind": "university", "domains": ["gist.ac.kr"], "url": "https://www.gist.ac.kr/en/", "levels": ["masters", "phd"]},
+  {"name": "University of Science and Technology (UST, Korean research institutes)", "region": "east_asia", "country": "South Korea", "kind": "university", "domains": ["ust.ac.kr"], "url": "https://ust.ac.kr/eng.do", "levels": ["masters", "phd"], "fields": ["natural_sciences_engineering"], "note": "Graduate degrees at government research institutes (e.g. KIST, ETRI)."},
+  {"name": "Korea University Graduate School", "region": "east_asia", "country": "South Korea", "kind": "university", "domains": ["korea.ac.kr", "korea.edu"], "url": "https://graduate.korea.ac.kr/", "levels": ["masters", "phd"]},
+  {"name": "Yonsei University Graduate School", "region": "east_asia", "country": "South Korea", "kind": "university", "domains": ["yonsei.ac.kr"], "url": "https://graduate.yonsei.ac.kr/", "levels": ["masters", "phd"]}
  ],
  "job_portals": [
   {"name": "Jobbnorge", "region": "scandinavia", "country": "Norway", "domains": ["jobbnorge.no"], "url": "https://www.jobbnorge.no/en", "note": "Norwegian universities post salaried PhD (stipendiat) positions here."},
@@ -128,6 +145,7 @@
   "findaphd.com", "findamasters.com", "jobs.ac.uk", "euraxess.ec.europa.eu", "academicpositions.com",
   "topuniversities.com", "educations.com", "scholarshipdb.net", "internationalscholarships.com",
   "afterschoolafrica.com", "youthop.com", "scholarshiproar.com", "wemakescholars.com",
-  "linkedin.com", "facebook.com", "reddit.com", "x.com", "twitter.com", "medium.com"
+  "linkedin.com", "facebook.com", "reddit.com", "x.com", "twitter.com", "medium.com",
+  "cucas.cn", "china-admissions.com"
  ]
 }

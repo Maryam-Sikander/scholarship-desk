@@ -19,6 +19,7 @@ _MULTI_SUFFIX = {
     "co.uk", "ac.uk", "gov.uk", "org.uk", "com.au", "edu.au", "gov.au", "org.au", "net.au",
     "gc.ca", "gouv.qc.ca", "co.nz", "ac.nz", "govt.nz", "gov.pl", "admin.ch", "ec.europa.eu",
     "edu.pk", "gov.pk", "ac.in", "gov.in", "edu.cn", "ac.jp",
+    "ac.cn", "org.cn", "gov.cn", "ac.kr", "go.kr", "or.kr", "re.kr",
 }
 
 FIELD_TAGS = {

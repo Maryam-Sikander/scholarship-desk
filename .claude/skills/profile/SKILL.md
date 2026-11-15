@@ -20,7 +20,7 @@ Read `CLAUDE.md` (non-negotiables) first.
 ## Ask in batches (one message per batch, wait for the reply)
 
 **A. What you're applying for** — levels (`masters`, `phd`), fields of study, research/topic
-keywords, regions (`europe`, `north_america`, `australia`, `scandinavia`; default all four),
+keywords, regions (`europe`, `north_america`, `australia`, `scandinavia`, `east_asia` = China + South Korea; default all five),
 intended start (YYYY-MM), universities in mind, countries to avoid, fully funded only?
 
 **B. Citizenship and residence** (drives country eligibility) — every citizenship held; country of

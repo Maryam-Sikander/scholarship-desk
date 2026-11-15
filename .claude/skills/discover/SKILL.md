@@ -1,6 +1,6 @@
 ---
 name: discover
-description: Find and verify funded master's and PhD opportunities (scholarships, funding that comes with admission, salaried PhD jobs) in Europe, North America, Australia and the Nordics, check the applicant's eligibility including country rules, and keep the dashboard current. "/discover" = weekly full search; "/discover daily" = process the watcher's changes and queued links only; "/discover <url>" = check one link.
+description: Find and verify funded master's and PhD opportunities (scholarships, funding that comes with admission, salaried PhD jobs) in Europe, North America, Australia, the Nordics and East Asia (China, South Korea), check the applicant's eligibility including country rules, and keep the dashboard current. "/discover" = weekly full search; "/discover daily" = process the watcher's changes and queued links only; "/discover <url>" = check one link.
 ---
 
 # Discover
@@ -126,6 +126,20 @@ grade/English rules it states. Use `source_kind: official` + `authority_url` on 
 - **US:** PhD funding comes with admission (RA/TA); many fellowships are for citizens only.
 - **Australia:** RTP and university scholarships come with the research-degree application; a supervisor
   is usually needed first (`supervisor_required: true`).
+- **China:** the Chinese Government Scholarship (CSC, campuschina.org) has separate routes with separate
+  deadlines: *university program* (apply to the university, which nominates you) and *bilateral* (for
+  Pakistan via HEC, hec.gov.pk). Record each route a page names as its own record, with its own deadline.
+  Also look at the ANSO scholarship (UCAS/USTC/CAS institutes), university/provincial scholarships, and
+  English-taught programmes. PhD (and some master's) applications often need a supervisor's acceptance
+  letter (`supervisor_required: true`). University application fees are common. Agencies such as CUCAS
+  are leads only, and they charge their own fees. Fake CSC admission letters that ask for a "deposit" are
+  a known scam: reject them.
+- **South Korea:** Global Korea Scholarship (GKS, studyinkorea.go.kr) has an *embassy track* (via the
+  Korean embassy in the applicant's country, usually Feb–Mar) and a *university track* (via the
+  university, usually Mar). Applicants may use only one track per year: record both as separate records
+  and say so in `notes`. KAIST, UNIST, POSTECH, GIST, SNU and UST give their own full scholarships with
+  admission (`admission_funding`). Most have two intakes (spring/fall) with fall deadlines around
+  Mar–May. Many accept an English-proficiency certificate or English-medium bachelor's in place of IELTS.
 
 ## Non-English pages
 

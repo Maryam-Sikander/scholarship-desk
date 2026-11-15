@@ -1,7 +1,7 @@
 # Scholarship Desk — project rules for Claude
 
 This project finds funded master's and PhD opportunities (scholarships, funding that comes
-with admission, salaried PhD positions) in Europe, North America, Australia and the Nordics,
+with admission, salaried PhD positions) in Europe, North America, Australia, the Nordics and East Asia (China, South Korea),
 and applies to them with a browser agent under the applicant's supervision.
 
 ## How the pieces fit
